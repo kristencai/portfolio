@@ -7,7 +7,7 @@
   
   /* Body */
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Atkinson Hyperlegible Mono", serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
@@ -18,11 +18,11 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
+    background-color: #C7D5E7;
+    /* color: #333; */
     padding: 1rem;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
   }
   
   nav ul {
@@ -36,7 +36,7 @@
   }
   
   nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem;
@@ -44,7 +44,7 @@
   }
   
   nav ul li a:hover {
-    background-color: #555;
+    background-color: #B5C6E0;
   }
   
   /* Sections */
@@ -55,19 +55,16 @@
   }
   
   #home {
-    background-color: #ffffff;
+    background-color: #C7D5E7;
   }
   
-  #about {
-    background-color: #eeeeee;
-  }
   
   #experience {
-    background-color: #ffffff;
+    background-color: #C7D5E7;
   }
   
   #projects {
-    background-color: #eeeeee;
+    background-color: #C7D5E7;
   }
   
   /* Section Titles */
@@ -82,4 +79,124 @@
     text-decoration: none;
     color: inherit;
   }
+
+  .home {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    height: 100vh; /* Full screen */
+    background-color: #C7D5E7; /* Light gray background */
+    padding-left: 75px; /* Add some padding to the left */
+  }
+
+  .greeting-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack greeting, image, and paragraph vertically */
+    align-items: center;
+    width: 70%;
+    opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start from slightly lower */
+  animation: fadeInUp 1s 4s forwards;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start from a lower position */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End at the normal position */
+    }
+  }
   
+  .greeting {
+    font-size: 4rem; /* Large text */
+    font-weight: bold;
+    color: #333; /* Dark gray */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    border-right: 4px solid #333; 
+    width: 0;
+    overflow: hidden; /* Hide text overflow */
+    animation: typing 3s steps(20) 1s forwards, blink-caret 0.75s step-end 1s infinite;
+  }
+
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    0%, 100% {
+      border-color: #333;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+ 
+
+  .clipart {
+    width: 300px; /* Adjust size of the clipart image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 30px; /* Space between clipart and paragraph */
+  }
+
+  .intro-paragraph {
+    font-size: 1.25rem; /* Smaller font size for the paragraph */
+    color: #555;
+    width: 50%; /* Set the width for the paragraph */
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .experience {
+    padding: 50px;
+    background-color: #C7D5E7;
+    text-align: left;
+  }
+
+  .experience-header {
+    display: flex;
+    align-items: center; /* Vertically aligns the text and image */
+    gap: 60px; /* Adds space between the heading and the image */
+  }
+
+  .notesimage {
+    width: 150px; /* Adjust size of the clipart image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .experience h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  
+  .experience-boxes {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    gap: 15px;
+  }
+  
+  .experience-box {
+    background-color: #C7D5E7;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .experience-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .experience-box p {
+    font-size: 1rem;
+    color: #666;
+  }
