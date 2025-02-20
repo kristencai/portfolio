@@ -60,7 +60,7 @@ const App: React.FC = () => {
         <div className="experience">
           <div className="experience-header">
             <h2>my experience</h2>
-            <img src={NotesImage} alt="music notes" className="notesimage" />
+            {/* <img src={NotesImage} alt="music notes" className="notesimage" /> */}
           </div>
           <div className="experience-boxes">
             {experienceData.map((experience, index) => (
@@ -74,8 +74,10 @@ const App: React.FC = () => {
       </section>
 
       <section id="projects">
-        <h2>projects</h2>
-        <p>accessible components</p>
+        <div className="projects-box">
+          <h2>projects</h2>
+          <p>accessible components</p>
+        </div>
       </section>
     </div>
   );

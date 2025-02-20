@@ -186,11 +186,16 @@
   }
   
   .experience-box h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
   }
   
   .experience-box p {
     font-size: 1rem;
     color: #666;
+  }
+
+  .projects-box {
+    text-align: left;  /* Align text to the left */
+    padding-left: 75px;
   }
