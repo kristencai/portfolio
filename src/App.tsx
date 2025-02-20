@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-import PianoImage from "./images/piano.png"; // Import the image
+import PianoImage from "./images/piano.png"; 
 import NotesImage from "./images/notes.png"
 
 const sections = ["home", "experience", "projects"];
@@ -27,7 +27,6 @@ const App: React.FC = () => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav>
         <ul>
           {sections.map((section) => (
@@ -44,12 +43,11 @@ const App: React.FC = () => {
         </ul>
       </nav>
 
-      {/* Sections */}
       <section id="home">
         <div className="home">
           <h1 className="greeting">hi, it's Kristen</h1>
           <div className="greeting-container">
-            <img src={PianoImage} alt="Clipart" className="clipart" />
+            <img src={PianoImage} alt="Piano" className="piano" />
             <p className="intro-paragraph">
               I'm a senior studying applied mathematics-computer science @ brown graduating this spring.
             </p>

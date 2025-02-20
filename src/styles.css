@@ -1,11 +1,9 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Body */
   body {
     font-family: "Atkinson Hyperlegible Mono", serif;
     background-color: #f4f4f4;
@@ -13,7 +11,6 @@
     line-height: 1.6;
   }
   
-  /* Navbar */
   nav {
     position: fixed;
     top: 0;
@@ -47,9 +44,8 @@
     background-color: #B5C6E0;
   }
   
-  /* Sections */
   section {
-    padding: 80px 20px;  /* Add some padding to compensate for the navbar */
+    padding: 80px 20px;  
     text-align: center;
     min-height: 100vh;
   }
@@ -67,14 +63,12 @@
     background-color: #C7D5E7;
   }
   
-  /* Section Titles */
   section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
   }
   
-  /* Links for Smooth Scrolling */
   a {
     text-decoration: none;
     color: inherit;
@@ -82,43 +76,44 @@
 
   .home {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start; 
     align-items: center;
-    height: 100vh; /* Full screen */
-    background-color: #C7D5E7; /* Light gray background */
-    padding-left: 75px; /* Add some padding to the left */
+    height: 100vh; 
+    background-color: #C7D5E7; 
+    padding-left: 75px; 
   }
+
 
   .greeting-container {
     display: flex;
     justify-content: center;
-    flex-direction: column; /* Stack greeting, image, and paragraph vertically */
+    flex-direction: column; 
     align-items: center;
     width: 70%;
-    opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start from slightly lower */
+    opacity: 0; 
+  transform: translateY(20px); 
   animation: fadeInUp 1s 4s forwards;
   }
 
   @keyframes fadeInUp {
     0% {
       opacity: 0;
-      transform: translateY(20px); /* Start from a lower position */
+      transform: translateY(20px); 
     }
     100% {
       opacity: 1;
-      transform: translateY(0); /* End at the normal position */
+      transform: translateY(0); 
     }
   }
   
   .greeting {
-    font-size: 4rem; /* Large text */
+    font-size: 4rem; 
     font-weight: bold;
-    color: #333; /* Dark gray */
-    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    color: #333; 
+    white-space: nowrap; 
     border-right: 4px solid #333; 
     width: 0;
-    overflow: hidden; /* Hide text overflow */
+    overflow: hidden; 
     animation: typing 3s steps(20) 1s forwards, blink-caret 0.75s step-end 1s infinite;
   }
 
@@ -142,16 +137,16 @@
   
  
 
-  .clipart {
-    width: 300px; /* Adjust size of the clipart image */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 30px; /* Space between clipart and paragraph */
+  .piano {
+    width: 300px; 
+    height: auto; 
+    margin-bottom: 30px; 
   }
 
   .intro-paragraph {
-    font-size: 1.25rem; /* Smaller font size for the paragraph */
+    font-size: 1.25rem; 
     color: #555;
-    width: 50%; /* Set the width for the paragraph */
+    width: 50%; 
     line-height: 1.5;
     text-align: left;
   }
@@ -164,13 +159,13 @@
 
   .experience-header {
     display: flex;
-    align-items: center; /* Vertically aligns the text and image */
-    gap: 60px; /* Adds space between the heading and the image */
+    align-items: center; 
+    gap: 60px; 
   }
 
   .notesimage {
-    width: 150px; /* Adjust size of the clipart image */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px; 
+    height: auto; 
   }
   
   .experience h2 {
@@ -180,7 +175,7 @@
   
   .experience-boxes {
     display: flex;
-    flex-direction: column; /* Stack boxes vertically */
+    flex-direction: column; 
     gap: 15px;
   }
   
@@ -188,7 +183,6 @@
     background-color: #C7D5E7;
     padding: 20px;
     border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   }
   
   .experience-box h3 {
