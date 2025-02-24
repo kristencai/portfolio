@@ -81,8 +81,7 @@ a {
   padding-left: 75px; 
 }
 
-
-.greeting-container {
+.intro-container {
   display: flex;
   justify-content: center;
   flex-direction: column; 
@@ -104,7 +103,7 @@ animation: fadeInUp 1s 4s forwards;
   }
 }
 
-.greeting {
+.intro {
   font-size: 4rem; 
   font-weight: bold;
   color: #333; 
@@ -132,7 +131,6 @@ animation: fadeInUp 1s 4s forwards;
     border-color: transparent;
   }
 }
-
 
 
 .piano {
@@ -217,9 +215,8 @@ animation: fadeInUp 1s 4s forwards;
   padding-left: 75px;
 }
 
-
 .carousel-container {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
@@ -299,24 +296,28 @@ animation: fadeInUp 1s 4s forwards;
 
 .redesign-images {
   display: flex;
-  justify-content: center;  /* Centers the images horizontally */
-  gap: 20px;  /* Adds spacing between the images */
+  justify-content: center;  
+  gap: 20px;  
   padding: 20px;
   height: auto;
 }
 
 .redesign {
-  width: 35%;  /* Adjusts the image size */
-  height: auto;  /* Ensures the aspect ratio is maintained */
+  width: 38%;  
+  height: auto;  
   object-fit: contain; 
 }
 
-
+.redesign2 {
+  width: 53%;  
+  height: auto;  
+  object-fit: contain; 
+}
 
 .image-display table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 10px; /* Space between rows */
+  border-spacing: 10px; 
 }
 
 .image-display th, .image-display td {
@@ -325,13 +326,13 @@ animation: fadeInUp 1s 4s forwards;
   border: 1px solid #ddd;
 }
 .image-display td:nth-child(1) {
-  width: 15%; /* Set the second column to be wider */
+  width: 15%; 
 }
 .image-display td:nth-child(2) {
-  width: 45%; /* Set the second column to be wider */
+  width: 45%; 
 }
 .image-display td:nth-child(3) {
-  width: 40%; /* Set the second column to be wider */
+  width: 40%; 
 }
 
 .reflection {

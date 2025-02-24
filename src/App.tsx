@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import PianoImage from "./images/piano.png";
 import SafariInitial from "./images/safari/initial.png"
@@ -10,16 +10,17 @@ import SpotifyActive from "./images/spotify/active.png"
 import MailInitial from "./images/mail/initial.png"
 import MailClick from "./images/mail/click.png"
 import MailActive from "./images/mail/active.png"
-import StateDiagram from "./images/redesign/statemodel.png"
+import StateDiagram1 from "./images/redesign/initialstate.png"
+import StateDiagram2 from "./images/redesign/redesignedstate.png"
 import SafariRedesign1 from "./images/redesign/initial.png"
 import SafariRedesign2 from "./images/redesign/hover.png"
 import ImageDisplay
   from "./imageDisplay";
 
 const sections = ["home", "experience", "projects"];
-const imageSets = [
+const images = [
   {
-    text : [
+    text: [
       "Safari", "Inputs", "Outputs",
       "Mouse & Touchpad", "can click (double, triple), drag, highlight, but search icon does not click", "click highlights outline and cursor, screenreader gives instructions and reads out letters",
       "Keyboard", "copy paste highlight shortcuts, esc to exit, op+command+F to enter", "focus order slow to navigate to search results",
@@ -28,7 +29,7 @@ const imageSets = [
     images: [SafariInitial, SafariClick, SafariIcon],
   },
   {
-    text : [
+    text: [
       "Spotify", "Inputs", "Outputs",
       "Mouse & Touchpad", "can click (double, triple), drag, highlight, search icon clicks", "click/hover highlights outline, screenreader does not read what you type or highlight",
       "Keyboard", "copy paste highlight shortcuts, esc deletes, shift or command K to search", "focus order good to go to search results but slow to navigate back",
@@ -37,7 +38,7 @@ const imageSets = [
     images: [SpotifyInitial, SpotifyHover, SpotifyActive],
   },
   {
-    text : [
+    text: [
       "Mail", "Inputs", "Outputs",
       "Mouse & Touchpad", "can click (double, triple), drag, highlight, but search icon does not click", "click highlights outline and cursor, screenreader says tooolbar, not search, reads out as you type and select",
       "Keyboard", "copy paste highlight shortcuts, esc to exit, tab to enter", "focus order goes to mailboxes, not to results",
@@ -46,8 +47,6 @@ const imageSets = [
     images: [MailInitial, MailClick, MailActive],
   },
 ];
-
-
 
 
 const App: React.FC = () => {
@@ -70,20 +69,20 @@ const App: React.FC = () => {
     },
   ];
 
-  const [showSubtopics, setShowSubtopics] = useState(false);
-  const [expandedSections, setExpandedSections] = useState({
+  const [showDes, setShowDes] = useState(false);
+  const [expanded, setExpanded] = useState({
     research: false,
     model: false,
     redesign: false,
     reflection: false,
   });
 
-  const toggleSubtopics = () => {
-    setShowSubtopics(!showSubtopics);
+  const toggleDes = () => {
+    setShowDes(!showDes);
   };
 
-  const toggleSection = (section: keyof typeof expandedSections) => {
-    setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  const toggleSection = (section: keyof typeof expanded) => {
+    setExpanded((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
   return (
@@ -106,8 +105,8 @@ const App: React.FC = () => {
 
       <section id="home">
         <div className="home">
-          <h1 className="greeting">hi, it's Kristen</h1>
-          <div className="greeting-container">
+          <h1 className="intro">hi, it's Kristen</h1>
+          <div className="intro-container">
             <img src={PianoImage} alt="Piano" className="piano" />
             <p className="intro-paragraph">
               I'm a senior studying applied mathematics-computer science @ brown graduating this spring.
@@ -115,9 +114,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-
-
-
       <section id="experience">
         <div className="experience">
           <div className="experience-header">
@@ -133,46 +129,47 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section id="projects">
         <div className="projects-box">
           <h2>projects</h2>
 
-          <h3 className="clickable" onClick={toggleSubtopics}>
-            accessible components {showSubtopics ? "▲" : "▼"}
+          <h3 className="clickable" onClick={toggleDes}>
+            search bar accessibility {showDes ? "▲" : "▼"}
           </h3>
-
-          {showSubtopics && (
+          {showDes && (
             <div className="subtopics">
-              {/* Application Research */}
               <p className="clickable" onClick={() => toggleSection("research")}>
-                application research {expandedSections.research ? "▲" : "▼"}
+                application research {expanded.research ? "▲" : "▼"}
               </p>
-              {expandedSections.research && (
+              {expanded.research && (
                 <div>
-                  {imageSets.map((set, index) => (
+                  {images.map((set, index) => (
                     <ImageDisplay key={index} images={set.images} text={set.text} />
                   ))}
                 </div>
               )}
-
-              {/* State Model */}
               <p className="clickable" onClick={() => toggleSection("model")}>
-                state model {expandedSections.model ? "▲" : "▼"}
+                state model {expanded.model ? "▲" : "▼"}
               </p>
-              {expandedSections.model && (
-                <img
-                  src={StateDiagram}
-                  alt="Search Bar State Diagrams for Mouse and Keyboard Users"
-                  className="state"
-                />
+              {expanded.model && (
+                <div className="redesign-images">
+                  <img
+                    src={StateDiagram1}
+                    alt="Search Bar State Diagrams for Mouse and Keyboard Users"
+                    className="redesign"
+                  />
+                  <img
+                    src={StateDiagram2}
+                    alt="Search Bar State Diagrams for Mouse and Keyboard Users"
+                    className="redesign2"
+                  />
+                </div>
               )}
 
-              {/* Component Redesign */}
               <p className="clickable" onClick={() => toggleSection("redesign")}>
-                component redesign: safari search bar {expandedSections.redesign ? "▲" : "▼"}
+                component redesign: safari search bar {expanded.redesign ? "▲" : "▼"}
               </p>
-              {expandedSections.redesign && (
+              {expanded.redesign && (
                 <div className="redesign-images">
                   <img
                     src={SafariRedesign1}
@@ -187,11 +184,10 @@ const App: React.FC = () => {
                 </div>
               )}
 
-              {/* Reflection */}
               <p className="clickable" onClick={() => toggleSection("reflection")}>
-                reflection {expandedSections.reflection ? "▲" : "▼"}
+                reflection {expanded.reflection ? "▲" : "▼"}
               </p>
-              {expandedSections.reflection && <p className = "reflection"><br />The search bars I observed all
+              {expanded.reflection && <p className="reflection"><br />The search bars I observed all
                 have good support for keyboard actions, mouse clicks, and highlighting.
                 Adding a search shortcut addresses the fact that keyboard shortcuts are
                 more and more widely used in technology. Making the search icon clickable
