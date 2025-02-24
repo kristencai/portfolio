@@ -189,7 +189,7 @@ const App: React.FC = () => {
               </p>
               {expanded.reflection && <p className="reflection"><br />The search bars I observed all
                 have good support for keyboard actions, mouse clicks, and highlighting.
-                Adding a search shortcut addresses the fact that keyboard shortcuts are
+                Addressing "mismatches" between users and features we offer them, adding a search shortcut addresses the fact that keyboard shortcuts are
                 more and more widely used in technology. Making the search icon clickable
                 tailors to the fact that icons are cues in the real world. <br /> <br />When doing
                 application research, all the search boxes did not change their font size
