@@ -61,10 +61,30 @@ section {
   background-color: #C7D5E7;
 }
 
+.accessible-project {
+  background-color: #C7D5E7;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+
+.accessible-project h1 {
+  padding-top: 30px;
+}
+
+.personas-project {
+  background-color: #C7D5E7;
+  padding-left: 70px;
+  padding-top: 30px;
+}
+
+.personas-project h1 {
+  padding-top: 30px;
+}
+
 section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2.5rem !important;
+  margin-bottom: 20px!important;
+  color: #333!important;
 }
 
 a {
@@ -166,10 +186,6 @@ animation: fadeInUp 1s 4s forwards;
   height: auto; 
 }
 
-.experience h2 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-}
 
 .experience-boxes {
   display: flex;
@@ -179,7 +195,6 @@ animation: fadeInUp 1s 4s forwards;
 
 .experience-box {
   background-color: #C7D5E7;
-  /* padding: 20px; */
   padding-bottom: 30px;
   border-radius: 8px;
 }
@@ -290,26 +305,43 @@ animation: fadeInUp 1s 4s forwards;
   margin-bottom: 30px; 
 }
 
-.subtopics {
-  margin-left: 20px;
-}
 
 .redesign-images {
   display: flex;
+  flex-direction: column;
   justify-content: center;  
   gap: 20px;  
   padding: 20px;
   height: auto;
 }
 
+.labeled-state {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.redesign-container {
+  display: flex;
+  align-items: center;
+}
+
+.redesign-caption {
+  width: 25%;
+}
+
+.safari-bar {
+  width: 90%;
+}
+
 .redesign {
-  width: 38%;  
+  width: 60%;  
   height: auto;  
   object-fit: contain; 
 }
 
 .redesign2 {
-  width: 53%;  
+  width: 86%;  
   height: auto;  
   object-fit: contain; 
 }
@@ -335,8 +367,132 @@ animation: fadeInUp 1s 4s forwards;
   width: 40%; 
 }
 
+.app-research {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .reflection {
   font-size: 1.0rem !important;
   margin-left: 3%;
-  margin-right: 5%
+  margin-right: 5%;
+}
+
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 40px);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  background: #333;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.back-link:hover {
+  background: #2b3987;
+}
+
+.searchbar-container {
+  padding: 20px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+.personas-container {
+  padding: 20px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.prod-research {
+  padding-left: 50px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.fountain {
+  width: 40%
+}
+
+.drink-caption {
+  width: 40%
+}
+
+.interview-summary {
+  width: 20%
+}
+
+.interview-questions {
+  width: 60%;
+}
+
+.user-research-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.personas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.persona-image {
+  width: 32%;
+}
+
+.persona-caption {
+  width: 20%;
+}
+
+.storyboard {
+  width: 60%
+}
+
+.storyboard-container {
+  padding-left: 50px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.storyboard-caption {
+  width: 30%
 }
