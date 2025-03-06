@@ -13,9 +13,9 @@ const Personas: React.FC = () => {
             <button onClick={() => navigate(-1)} className="back-link">Back</button>
             <h1>Personas & Storyboarding</h1>
             <div className="personas-container">
-                <div className="overview">
+                <div>
                     <h2> Overview </h2>
-                    <p>As users interact with interfaces in everyday life, how can their
+                    <p className="overview">As users interact with interfaces in everyday life, how can their
                         needs and experiences be illustrated? <br></br><br></br>I explored real Brown students'
                         interactions with a dining hall fountain drink machine before
                         demonstrating their end-to-end experiences through personas and storyboarding.</p>
@@ -45,6 +45,7 @@ const Personas: React.FC = () => {
                         <i>1, 3, 14</i> <br></br> <br></br>
                         2. What are things you like, if any, when using the drink machine? <br></br>
                         <i>Water selection is easy to find</i> <br></br>
+                        <i>Touchscreen is a familiar interface</i> <br></br>
                         <i>Dispense button is intuitive</i> <br></br> <br></br>
                         3. What are frustrations, if any, that you have while using the drink machine?
                         <br></br>
@@ -81,6 +82,17 @@ const Personas: React.FC = () => {
                         className="storyboard"
                     />
                 </div>
+                <h2> Final Thoughts </h2>
+                <div>
+                <p className="overview">Through my user and interface research, I was able to better understand
+                    the needs and experiences that are important for designers to consider.
+                    <br></br><br></br>
+                    Interestingly enough, on the day I finished this project, Andrews Hall
+                    installed a new drink machine with a larger dispenser and a more
+                        responsive touchscreen.
+                        <br></br><br></br>
+                    </p>
+                    </div>
             </div>
         </div>
     );
