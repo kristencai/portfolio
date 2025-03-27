@@ -536,8 +536,8 @@ animation: fadeInUp 1s 4s forwards;
 
 .mockups {
   display: flex;
-  flex-direction: column; /* Stack rows */
-  gap: 20px; /* Space between rows */
+  flex-direction: column; 
+  gap: 20px; 
 }
 
 .clickable-site {
