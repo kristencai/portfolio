@@ -7,7 +7,7 @@ const sections = ["home", "experience", "projects"];
 const projects = [
   { id: "1", title: "Accessible Search Bar", path: "/accessible" },
   { id: "2", title: "Personas & Storyboarding", path: "/personas" },
-  { id: "3", title: "Responsive Redesign", path: "/responsiveredesign" },
+  { id: "3", title: "Responsive Redesign", path: "/redesign" },
   { id: "4", title: "Iterative Design", path: "/iterativedesign" },
 ];
 
